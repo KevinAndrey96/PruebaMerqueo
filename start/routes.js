@@ -20,3 +20,5 @@ Route.on('/').render('welcome')
 Route.post('/populate_inv','PopulateController.inventory')
 Route.post('/populate_ord','PopulateController.orders')
 Route.post('/populate_prov','PopulateController.providers')
+
+Route.get('/uno','OneController.uno')
