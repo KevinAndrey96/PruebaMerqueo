@@ -24,7 +24,7 @@ class OneController {
         }
     }
     
-    async uno ({ request, response }) {
+    async index ({ request, response }) {
         
         const Order = use("App/Models/Order")
         const OrdersProducts = use("App/Models/OrdersProducts")
