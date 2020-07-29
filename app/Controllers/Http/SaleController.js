@@ -64,7 +64,7 @@ class SaleController {
         const Provider = use("App/Models/Provider")
         const Inventory = use("App/Models/Inventory")
 
-        const orders = await Order.query().where('deliveryDate', '=', date).fetch()
+        const orders = await Order.query().where('deliveryDate', '=', date).orderBy('priority', 'asc').fetch()
 
         for (const order of orders.toJSON()) {
             //if(this.Format_date(order.deliveryDate)==date)
