@@ -68,7 +68,7 @@ class ProductsFromProvController {
         const Inventory = use("App/Models/Inventory")
         const axios = require('axios');
         
-        const orders = await Order.all()
+        const orders = await Order.query().orderBy('priority', 'asc').fetch()
 
         
         for (const order of orders.toJSON()) {
@@ -160,8 +160,9 @@ class ProductsFromProvController {
                 
                 //Rta.data.push(data)
             }
-            if(order_list.length!=0)//Se omiten ordenes que no deban ser alistadas por proveedores
+            if(order_list.data.length!=0)//Se omiten ordenes que no deban ser alistadas por proveedores
                 Rta.order_list.push(order_list)
+            
         }
         return Rta
     }

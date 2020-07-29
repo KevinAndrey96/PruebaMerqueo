@@ -36,7 +36,7 @@ class OneController {
         Rta.message="Consultar qué productos y qué cantidad puede ser alistada desde el inventario"
         Rta["data"]=[]        
 
-        const orders = await Order.all()
+        const orders = await Order.query().orderBy('priority', 'asc').fetch()
         for (const order of orders.toJSON()) {
             //console.log("------------------------------")
             //console.log("order id: "+order.id)

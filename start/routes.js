@@ -23,3 +23,4 @@ Route.post('/populate_prov','PopulateController.providers')
 
 Route.get('/ProductsFromInventory','ProductsFromInventoryController.index')
 Route.get('/ProductsFromProviders','ProductsFromProvidersController.index')
+Route.get('/WorstsSellers','SaleController.worst')
