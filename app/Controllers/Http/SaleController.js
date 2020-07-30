@@ -15,12 +15,12 @@ class SaleController {
         }
         return index
     }
-    Format_date(d)
+    /*Format_date(d)
     {
         d= new Date(d);
         var datestring = d.getFullYear()+"-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2)
         return datestring
-    }
+    }*/
     Sort_products(Obj,param)
     {
         for(var j=0; j<Obj.length;j++)
@@ -128,7 +128,6 @@ class SaleController {
             //if(this.Format_date(order.deliveryDate)==date)
             if(order.deliveryDate==date)
             {
-                
                 const ordersproducts= await OrdersProducts.query().where('order_id', '=', order.id).fetch()
                 for(const op of ordersproducts.toJSON())
                 {
