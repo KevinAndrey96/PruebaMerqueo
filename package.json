@@ -30,7 +30,7 @@
     "axios": "^0.19.2",
     "date-format": "^3.0.0",
     "mysql": "^2.18.1",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.1.5"
   },
   "devDependencies": {},
   "autoload": {
